@@ -15,7 +15,6 @@ describe('image library', () => {
 
   it('converts buffer headers into an object', () => {
     assert.ok(Object.keys(image.headers).length);
-    // console.log(image);
   });
 
   it('runs a transform on the buffer', done => {
@@ -27,16 +26,18 @@ describe('image library', () => {
 
   it('writes the image buffer to a new file', done => {
     image.write('new-image.bmp', (err) => {
-      // console.log(image);
-
-      done();
+      fs.readFile('new-image.bmp', (err,data) => {
+        if (err) return done(err);
+        else {
+          fs.readFile('pinned.bmp', (err,data2) => {
+            if (err) return done(err);
+            else {
+              assert.deepEqual(data, data2);
+              done();
+            };
+          });
+        };
+      });
     });
   });
 });
-
-/*
-Open file using fs and read it into a buffer
-Convert buffer headers data into a Javascript Object
-Run a transform on the buffer
-Write the buffer to a new file.
-*/
