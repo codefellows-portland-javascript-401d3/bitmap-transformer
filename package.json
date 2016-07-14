@@ -4,6 +4,7 @@
   "description": "Code Fellows 401 Lab about Buffers",
   "main": "index.js",
   "scripts": {
+    "pretest": "eslint **/*.js",
     "test": "mocha"
   },
   "repository": {
@@ -19,7 +20,6 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.0.1",
-    "mocha": "^2.5.3",
-    "mocha-image-compare": "^1.0.3"
+    "mocha": "^2.5.3"
   }
 }
