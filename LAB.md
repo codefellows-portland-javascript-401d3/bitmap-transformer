@@ -3,10 +3,9 @@
 
 ## To Submit this Assignment
 
-* Have team leader fork this repository, or create a team organization 
-and fork the repo their
+* The team should fork this repository to one team member's gh account, or create a team organization 
+and fork the repo
 * Add team members as collaborators to the team repo fork
-* Team members should clone and work against team repo
 * When complete:
 	* submit a pull request to the class assignment repository when done :)
 	* each person will submit a link to your  to your PR in canvas
