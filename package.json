@@ -1,0 +1,29 @@
+{
+  "name": "bitmap-transformer",
+  "version": "1.0.0",
+  "description": "bit map tranformer",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "watch": "mocha -w",
+    "lint": "eslint *.js",
+    "pretest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afoldoe/bitmap-transformer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afoldoe/bitmap-transformer/issues"
+  },
+  "homepage": "https://github.com/afoldoe/bitmap-transformer#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
