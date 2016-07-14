@@ -1,21 +1,34 @@
-const chai = require('chai').assert();
+const assert = require('chai').assert;
 const fs = require('fs');
+const read = require('../lib/read');
+const write = require('../lib/write');
+const transform = require('../lib/transform');
 
 
 
 
 
+const testPath = 'palette-bitmap.bmp';
 
 describe('file', () => {
-  it('opens using fs', function() {
-    
+  it('opens using fs', function(done) {
+    read.get(testPath, function(err, data) {
+      if(err) throw new Error(err);
+      console.log(data);
+      done();
+    });
   });
 
-  it('can be read into a buffer', function() {
-    
+  it('can be read into a buffer', function(done) {
+    write.buff(testPath, function(err, data) {
+      if(err) throw new Error(err);
+      if(typeof data !== 'object') throw new Error('Returned data type: ' + typeof data);
+      //console.log(data);
+      done();
+    });
   });
 
-  it('header data stored in data object', function() {
+  it('header data stored in js object', function() {
     
   });
 
