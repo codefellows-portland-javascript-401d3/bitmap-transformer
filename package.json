@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/katesowles/bitmap-transformer/issues"
   },
-  "homepage": "https://github.com/katesowles/bitmap-transformer#readme"
+  "homepage": "https://github.com/katesowles/bitmap-transformer#readme",
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
 }
