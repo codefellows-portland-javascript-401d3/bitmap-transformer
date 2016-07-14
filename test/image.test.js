@@ -15,10 +15,24 @@ describe('image library', () => {
 
   it('converts buffer headers into an object', () => {
     assert.ok(Object.keys(image.headers).length);
-    console.log(image);
-    
+    // console.log(image);
   });
-})
+
+  it('runs a transform on the buffer', done => {
+    let origBuffer = Buffer.from(image.pixelArray);
+    image.transform();
+    assert.notDeepEqual(image.pixelArray, origBuffer);
+    done();
+  });
+
+  it('writes the image buffer to a new file', done => {
+    image.write('new-image.bmp', (err) => {
+      // console.log(image);
+
+      done();
+    });
+  });
+});
 
 /*
 Open file using fs and read it into a buffer
