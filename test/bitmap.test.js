@@ -14,7 +14,7 @@ describe('file', () => {
   it('opens using fs', function(done) {
     read.get(testPath, function(err, data) {
       if(err) throw new Error(err);
-      console.log(data);
+      console.log(data.length);
       done();
     });
   });
@@ -28,8 +28,14 @@ describe('file', () => {
     });
   });
 
-  it('header data stored in js object', function() {
-    
+  it('header data stored in js object', function(done) {
+    read.get(testPath, function(err, data) {
+      if(err) return done(err);
+      const headerObj = write.parseHeaderToJs(data);
+      if(typeof headerObj !== 'object') throw new Error('Returned data type: ' + typeof data);
+      // console.log(headerObj);
+      done();
+    })
   });
 
   it('run transformer on buffer', function() {
