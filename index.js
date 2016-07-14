@@ -1,16 +1,13 @@
-const fs = require( 'fs' );
+const transform = require('./lib/transform');
+const invert = require('./lib/invert');
+// const grayscale = require('./lib/grayscale');
 
-function getBufferHeader(){
-
-  fs.readFile('./palette-bitmap.bmp', (err, buffer) => {
-    if (err) return console.error(err);
-    const offset = buffer.readInt16LE(10);
-    const numColorsInPalette = buffer.readInt16LE(46);
-    console.log(offset);
-    console.log(numColorsInPalette);
-    console.log(buffer);
-  });
-
+function invertIt () {
+  transform('./img/palette-bitmap.bmp', invert);
 }
+invertIt();
 
-getBufferHeader();
+// function grayscaleIt () {
+//   transform('./img/palette-bitmap.bmp', grayscale);
+// }
+// grayscaleIt();
