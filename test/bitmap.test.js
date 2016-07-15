@@ -35,16 +35,26 @@ describe('file', () => {
       if(typeof headerObj !== 'object') throw new Error('Returned data type: ' + typeof data);
       // console.log(headerObj);
       done();
-    })
+    });
   });
 
-  it('run transformer on buffer', function() {
-    
+  it('run transformer on buffer', function(done) {
+    read.get(testPath, function(err, data) {
+      if(err) return done(err);
+      const headerObj = write.parseHeaderToJs(data);
+      transform.colorShift(headerObj.colorTableArr, 'blue', 100);
+      // console.log(headerObj.colorTableArr);
+      done();
+    });
   });
 
-  it('write the buffer to a new file', function() {
-    
-  });
+  it('write the buffer to a new file', function(done) {
+
+    write.createImg(testPath, 'blue', 200, function(err, data) {
+      if(err) done(err);
+      done();
+    });
+  }); 
 });
 
 describe('api calls', () => {
