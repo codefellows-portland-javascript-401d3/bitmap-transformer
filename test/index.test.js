@@ -1,13 +1,10 @@
 const assert = require('chai').assert;
-const transform = require('../lib/transform');
-const save = require('../lib/save');
+const attemptPath = '../img/shiftedCorrectly.bmp';
 
-describe('returns a file', ()=>{
+describe ('image comparisons', () => {
 
-  it('changes the file and saves', (done)=>{
-    transform('./img/palette-bitmap.bmp', save);
-    assert.isOk('../img/temp/shiftedBitmap.bmp');
-    done();
+  it ('is shifted image created?', () => {
+    assert.isOk(attemptPath, 'modified image is not being created');
   });
 
 });
