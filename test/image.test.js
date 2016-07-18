@@ -9,8 +9,9 @@ const newPath = 'new-non-palette-image.bmp';
 describe('test image library against non-palette BMP', () => {
 
   it('opens a file and reads it into a buffer', done => {
-    image.load(imagePath, (result) => {
-      assert.ok(result)
+    image.load(imagePath, (err,result) => {
+      assert.ok(!err);
+      assert.ok(result);
       done();
     });
   });
@@ -51,8 +52,9 @@ const newPath2 = 'new-palette-image.bmp';
 describe('test image library against palette BMP', () => {
 
   it('opens a file and reads it into a buffer', done => {
-    image.load(imagePath2, (result) => {
-      assert.ok(result)
+    image.load(imagePath2, (err,result) => {
+      assert.ok(!err);
+      assert.ok(result);
       done();
     });
   });
