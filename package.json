@@ -24,6 +24,7 @@
   "homepage": "https://github.com/afoldoe/bitmap-transformer#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^3.1.0",
     "mocha": "^2.5.3"
   }
 }
