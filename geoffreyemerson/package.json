@@ -1,0 +1,25 @@
+{
+  "name": "cf401-lab-bitmap-transformer",
+  "version": "1.0.0",
+  "description": "Code Fellows 401 Lab about Buffers",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint **/*.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoffreyEmerson/cf401-lab-bitmap-transformer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeoffreyEmerson/cf401-lab-bitmap-transformer/issues"
+  },
+  "homepage": "https://github.com/GeoffreyEmerson/cf401-lab-bitmap-transformer#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.0.1",
+    "mocha": "^2.5.3"
+  }
+}
