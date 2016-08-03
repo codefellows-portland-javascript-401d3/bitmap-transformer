@@ -1,0 +1,23 @@
+{
+  "name": "bitmap-transformer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katesowles/bitmap-transformer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/katesowles/bitmap-transformer/issues"
+  },
+  "homepage": "https://github.com/katesowles/bitmap-transformer#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
